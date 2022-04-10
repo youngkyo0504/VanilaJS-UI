@@ -1,0 +1,48 @@
+.carousel-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.carousel {
+  width: 60%;
+  height: auto;
+  position: relative;
+  height: 100%;
+}
+.image {
+  border-radius: 16px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.next-btn,
+.pre-btn {
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+.pre-btn {
+  left: 5%;
+}
+.next-btn {
+  right: 5%;
+}
