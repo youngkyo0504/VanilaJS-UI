@@ -15,18 +15,20 @@ body {
   width: 60%;
   height: auto;
   position: relative;
-  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
 }
-.image {
-  border-radius: 16px;
+.carousel-image {
+  opacity: 0;
   width: 100%;
   position: absolute;
+  top: 0;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  transition: transform 1s, z-index 0.5s;
 }
+
 .next-btn,
-.pre-btn {
+.prev-btn {
   position: absolute;
   top: 0;
   top: 50%;
@@ -38,11 +40,29 @@ body {
   text-align: center;
   border-radius: 50%;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.pre-btn {
+.prev-btn {
   left: 5%;
 }
 .next-btn {
   right: 5%;
+}
+
+.initial,
+.active {
+  z-index: 30;
+  opacity: 1;
+  position: relative;
+}
+.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+  opacity: 1;
+  z-index: 10;
+}
+.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+  opacity: 1;
+  z-index: 10;
 }
