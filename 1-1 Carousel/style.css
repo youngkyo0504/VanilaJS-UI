@@ -1,6 +1,7 @@
 .carousel-container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -19,6 +20,7 @@ body {
   transform-style: preserve-3d;
 }
 .carousel-image {
+  user-select: none;
   opacity: 0;
   width: 100%;
   position: absolute;
@@ -36,18 +38,21 @@ body {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  border: 1px solid black;
   text-align: center;
+  border: 0;
   border-radius: 50%;
   font-weight: 500;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .prev-btn {
-  left: 5%;
+  left: 15%;
 }
 .next-btn {
-  right: 5%;
+  right: 15%;
 }
 
 .initial,
@@ -65,4 +70,22 @@ body {
   transform: translateX(100%); /* Move 'next' item to the right */
   opacity: 1;
   z-index: 10;
+}
+.tab-list {
+  margin-top: 20px;
+  display: flex;
+}
+.gray-circle {
+  margin-left: 8px;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+.gray-circle:first-child {
+  margin-left: 0px;
+}
+.active-tab {
+  background-color: #86868b;
 }

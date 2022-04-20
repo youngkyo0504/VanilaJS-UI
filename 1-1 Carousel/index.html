@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./index.js" defer></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="carousel-container">
-        <div class="carousel">
-            <img src="https://picsum.photos/500/300?random=1" alt="" class="carousel-image initial">
-            <img src="https://picsum.photos/500/300?random=2" alt="" class="carousel-image">
-            <img src="https://picsum.photos/500/300?random=3" alt="" class="carousel-image">
-            <img src="https://picsum.photos/500/300?random=4" alt="" class="carousel-image">
-        </div>
-        <div class="next-btn"> <span> > </span> </div>
-        <div class="prev-btn">
-            < </div>
-        </div>
-
-</body>
-
+      <div class="carousel">
+        <img
+          src="https://picsum.photos/500/300?random=1"
+          alt=""
+          class="carousel-image initial"
+        />
+        <img
+          src="https://picsum.photos/500/300?random=2"
+          alt=""
+          class="carousel-image"
+        />
+        <img
+          src="https://picsum.photos/500/300?random=3"
+          alt=""
+          class="carousel-image"
+        />
+        <img
+          src="https://picsum.photos/500/300?random=4"
+          alt=""
+          class="carousel-image"
+        />
+      </div>
+      <button class="next-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="#86868b"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+      <button class="prev-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="#86868b"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <div class="tab-list">
+        <div class="active-tab gray-circle"></div>
+        <div class="gray-circle"></div>
+        <div class="gray-circle"></div>
+        <div class="gray-circle"></div>
+      </div>
+    </div>
+  </body>
 </html>
